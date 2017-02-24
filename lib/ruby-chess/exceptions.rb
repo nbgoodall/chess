@@ -1,4 +1,4 @@
-module Chess
+module RubyChess
 
   # This exception will be raised when an invalid short algebraic chess notation
   # string is passed to the Game#move function.

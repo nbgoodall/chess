@@ -3,7 +3,7 @@ require 'bundler/gem_tasks'
 require 'rdoc/task'
 require 'sdoc'
 Rake::RDocTask.new do |rd|
-  rd.title = 'Chess'
+  rd.title = 'RubyChess'
   rd.main = 'README.rdoc'
   rd.rdoc_dir = 'doc'
   rd.rdoc_files.include('README.rdoc', 'lib/**/*.rb', 'ext/*.c')

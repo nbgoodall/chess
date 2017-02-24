@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path('../lib', __FILE__)
-require 'chess/version'
+require 'ruby-chess/version'
 
 Gem::Specification.new do |s|
-  s.name        = 'chess'
-  s.version     = Chess::VERSION
+  s.name        = 'ruby-chess'
+  s.version     = RubyChess::VERSION
   s.authors     = ['Enrico Pilotto']
   s.email       = ['enrico@megiston.it']
   s.homepage    = 'https://github.com/pioz/chess'

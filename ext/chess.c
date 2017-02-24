@@ -627,7 +627,7 @@ void
 Init_chess ()
 {
   init_chess_library ();
-  VALUE chess = rb_define_module ("Chess");
+  VALUE chess = rb_define_module ("RubyChess");
 
   /*
    * This class rappresents a collection of boards of a single chess game.

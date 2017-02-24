@@ -1,6 +1,6 @@
 require File.join(File.dirname(__FILE__), '../../ext/chess')
 
-module Chess
+module RubyChess
 
   # This class rappresents a chess game.
   class Game < CGame
@@ -16,8 +16,8 @@ module Chess
     #
     # May be raise an InvalidPgnFormatError or IllegalMoveError or BadNotationError.
     def self.load_pgn(file)
-      pgn = Chess::Pgn.new(file)
-      game = Chess::Game.new
+      pgn = RubyChess::Pgn.new(file)
+      game = RubyChess::Game.new
       pgn.moves.each { |m| game.move(m) }
       if !game.over?
         case pgn.result
@@ -42,7 +42,7 @@ module Chess
     # *Warning*: this game do not have history before the FEN placement.
     def self.load_fen(fen)
       if fen =~ /^((?:[PRNBQKprnbqk1-8]{1,8}\/){7}[RNBQKPrnbqkp1-8]{1,8})\s(w|b)\s(K?Q?k?q?|-)\s([a-h][1-8]|-)\s(\d+)\s(\d+)$/
-        game = Chess::Game.new
+        game = RubyChess::Game.new
         game.set_fen!(fen)
         return game
       else
@@ -143,7 +143,7 @@ module Chess
 
     # Returns the PGN rappresenting the game.
     def pgn
-      pgn = Chess::Pgn.new
+      pgn = RubyChess::Pgn.new
       pgn.moves = self.moves
       pgn.result = self.result
       return pgn

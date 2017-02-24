@@ -1,11 +1,11 @@
-module Chess
+module RubyChess
 
   # Use Gnuchess to I.A. <em>(Only a draft)</em>
   # To use this module, extend a game object with Chess::Gnuchess.
   # Gnuchess binary have to be installed.
   #
-  #    g = Chess::Game.new
-  #    g.extend Chess::Gnuchess
+  #    g = RubyChess::Game.new
+  #    g.extend RubyChess::Gnuchess
   #    g.gnuchess_move!
   #    puts g
   module Gnuchess
@@ -110,7 +110,7 @@ module Chess
     # Raise an exception if Gnuchess is not installed
     def self.raise_if_gnuchess_is_not_installed
       unless gnuchess_installed?
-        raise 'You need to install Gnuchess to use the module Chess::Gnuchess.'
+        raise 'You need to install Gnuchess to use the module RubyChess::Gnuchess.'
       end
     end
 
